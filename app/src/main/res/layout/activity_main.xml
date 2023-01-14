@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <TextView
+       android:id="@+id/textViewPhoneNO"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text= "Кому:"
+       android:textSize="38sp"
+       app:layout_constraintStart_toStartOf="parent"
+       android:layout_marginStart="30dp"
+       android:layout_marginTop="20dp"
+       app:layout_constraintTop_toTopOf="parent"
+       android:textColor="@color/black"
+       tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:hint="Кому отправить ?"
+        android:textSize="20dp"
+        android:inputType="textEmailAddress"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPhoneNO"/>
+
+    <TextView
+        android:id="@+id/textViewSubject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Тема:"
+        android:textSize="38sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextTo"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextSubject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:hint="Какая тема ?"
+        android:textSize="20dp"
+        android:inputType="text"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewSubject"/>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text= "Сообщение:"
+        android:textSize="38sp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/editTextSubject"
+        android:textColor="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/editTextMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        android:hint="Добавьте сообщение ?"
+        android:textSize="20dp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:lines="6"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMessage"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:text="SEND"
+        android:textSize="25sp"
+        android:id="@+id/buttonSend"
+        app:layout_constraintTop_toBottomOf="@+id/editTextMessage"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
